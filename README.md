@@ -25,30 +25,30 @@ Pour débuter on prend connaissance du scenario proposé. L'image ci dessous ré
 
 Les questions auxquelles on doit répondre après investigation sont les suivantes:
 
-Q1 : Identifying the sender's IP address with specific SPF and DKIM values helps trace the source of the phishing email. What is the sender's IP address that has an SPF value of softfail and a DKIM value of fail?
+Q1 : Identifier l'adresse IP de l'expéditeur grâce à des valeurs SPF et DKIM spécifiques permet de remonter à la source d'un courriel d'hameçonnage. Quelle est l'adresse IP de l'expéditeur dont la valeur SPF est « softfail » et la valeur DKIM « fail » ?
 
-Q2: Understanding the return path of an email is essential for tracing its origin. What is the return path specified in this email?
+Q2 : Comprendre le chemin de retour d'un courriel est essentiel pour en retracer l'origine. Quel est le chemin de retour spécifié dans ce courriel ?
 
-Q3: Identifying the source of malware is critical for effective threat mitigation and response. What is the IP address of the server hosting the malicious file related to malware distribution?
+Q3 : Identifier la source d'un logiciel malveillant est crucial pour une atténuation et une réponse efficaces aux menaces. Quelle est l'adresse IP du serveur hébergeant le fichier malveillant lié à la distribution du logiciel malveillant ?
 
-Q4: Identifying malware that exploits system resources for cryptocurrency mining is critical for prioritizing threat mitigation efforts. The malicious URL can deliver several malware types. Which malware family is responsible for cryptocurrency mining?
+Q4 : Identifier les logiciels malveillants qui exploitent les ressources système pour le minage de cryptomonnaies est essentiel pour prioriser les efforts d'atténuation des menaces. L'URL malveillante peut diffuser plusieurs types de logiciels malveillants. Quelle famille de logiciels malveillants est responsable du minage de cryptomonnaies ?
 
-Q5: Identifying the specific URLs malware requests is key to disrupting its communication channels and reducing its impact. Based on the previous analysis of the cryptocurrency malware sample, what does this malware request the URL?
+Q5 : Identifier les URL spécifiques demandées par le logiciel malveillant est essentiel pour perturber ses canaux de communication et réduire son impact. D'après l'analyse précédente de l'échantillon de logiciel malveillant de cryptomonnaie, quelle URL ce logiciel malveillant demande-t-il ?
 
-Q6: Understanding the registry entries added to the auto-run key by malware is crucial for identifying its persistence mechanisms. Based on the BitRAT malware sample analysis, what is the executable's name in the first value added to the registry auto-run key?
+Q6 : Comprendre les entrées de registre ajoutées à la clé d’exécution automatique par un logiciel malveillant est crucial pour identifier ses mécanismes de persistance. D’après l’analyse de l’échantillon de logiciel malveillant BitRAT, quel est le nom de l’exécutable dans la première valeur ajoutée à la clé d’exécution automatique du registre ?
 
-Q7: Identifying the SHA-256 hash of files downloaded from a malicious URL is essential for tracking and analyzing malware activity. Based on the BitRAT analysis, what is the SHA-256 hash of the file previously downloaded and added to the autorun keys?
+Q7 : Identifier le hachage SHA-256 des fichiers téléchargés depuis une URL malveillante est essentiel pour suivre et analyser l’activité des logiciels malveillants. D’après l’analyse de BitRAT, quel est le hachage SHA-256 du fichier précédemment téléchargé et ajouté aux clés d’exécution automatique ?
 
-Q8: Analyzing the HTTP requests made by malware helps in identifying its communication patterns. What is the URL in the HTTP request used by the loader to retrieve the BitRAT malware?
+Q8 : Analyser les requêtes HTTP effectuées par un logiciel malveillant permet d’identifier ses modes de communication. Quelle est l’URL de la requête HTTP utilisée par le chargeur pour récupérer le logiciel malveillant BitRAT ?
 
-Q9: Introducing a delay in malware execution can help evade detection mechanisms. What is the delay (in seconds) caused by the PowerShell command according to the BitRAT analysis?
+Q9 : Introduire un délai dans l’exécution d’un logiciel malveillant peut permettre de contourner les mécanismes de détection. Quel est le délai (en secondes) causé par la commande PowerShell d’après l’analyse de BitRAT ?
 
-Q10: Tracking the command and control (C2) domains used by malware is essential for detecting and blocking malicious activities. What is the C2 domain used by the BitRAT malware?
+Q10 : Suivre les domaines de commande et de contrôle (C2) utilisés par les logiciels malveillants est essentiel pour détecter et bloquer les activités malveillantes. Quel est le domaine C2 utilisé par le malware BitRAT ?
 
-Q11: Understanding how malware exfiltrates data is essential for detecting and preventing data breaches. According to the AsyncRAT analysis, what is the Telegram Bot ID used by this malware?
+Q11 : Comprendre comment les malwares exfiltrent des données est essentiel pour détecter et prévenir les violations de données. D’après l’analyse d’AsyncRAT, quel est l’identifiant du bot Telegram utilisé par ce malware ?
 
 
-
+### **2- Prise de connaissance du cas** ###
 
 
 
