@@ -11,6 +11,7 @@ L'objectif de ce TP est d'analyser un e-mail suspect à l'aide de plusieurs outi
 ### Outils utilisés
 
 - VirusTotal
+- Notepad++
 - MalwareBazaar
 - Email Header Analyzer
 
@@ -50,6 +51,33 @@ Q11 : Comprendre comment les malwares exfiltrent des données est essentiel pour
 
 ### **2- Prise de connaissance du cas** ###
 
+Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration précise. Il s' agit de sélectionner le langage **YAML** sous la section language. Ce paramètres permet de distinguer facilement les différentes parties dont entêtes du courriel.
+
+<img width="3072" height="1753" alt="notepad++" src="https://github.com/user-attachments/assets/14863a90-a12e-406e-82c2-4bc6f15c6f57" />
+
+*Image 2: Aperçu de la configuration Notepad++*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### **1- Prise de connaissance du cas** ###
 
 
 
@@ -75,6 +103,13 @@ Q11 : Comprendre comment les malwares exfiltrent des données est essentiel pour
 
 
 
+
+
+
+
+
+
+### **1- Prise de connaissance du cas** ###
 
 
 
