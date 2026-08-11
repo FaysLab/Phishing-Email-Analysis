@@ -110,7 +110,9 @@ Selon Bitdefender, **BitRat** est un cheval de Troie d'accès à distance (RAT) 
 Enfin **Coinminer**  est un logiciel malveillant indésirable qui utilise la puissance de calcul de la victime (principalement le processeur et la mémoire vive) pour miner des cryptomonnaies (par exemple, Monero ou Zcash). Ce logiciel malveillant assure sa persistance en installant un mineur open source au démarrage, sans l'accord de la victime. Les mineurs de cryptomonnaies les plus sophistiqués utilisent des paramètres de minuterie ou limitent l'utilisation du processeur pour rester discrets.
 
 
+<img width="2594" height="1625" alt="details du malware" src="https://github.com/user-attachments/assets/24c379a3-9a4e-4e0d-8a21-4b5f4e0c6924" />
 
+ *Image 7: Details du malware*
 
 
 
