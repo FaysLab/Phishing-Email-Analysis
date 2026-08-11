@@ -71,6 +71,12 @@ La raison pour laquelle je commence l' investigation par ces entêtes est simple
 
  *Image 3: Aperçu des entêtes d' authentification*
 
+On observe sur l' image 3, un "*softfail**" du SPF et l' adresses IP de l' envoyeur est 18.208.22.104. On peut ensuite passer au corps du courriel.
+
+### **3- Corps du courriel** ###
+
+
+
 
 
 
