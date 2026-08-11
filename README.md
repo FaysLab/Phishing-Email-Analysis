@@ -15,6 +15,8 @@ L'objectif de ce TP est d'analyser un e-mail suspect à l'aide de plusieurs outi
 - Urlhauss.abuse.ch
 - Notepad++
 - AlienVault
+- JoeSandbox
+- Cyberchef (permet de décrypter)
 - DomainTools
 - MalwareBazaar
 - Email Header Analyzer
@@ -73,7 +75,7 @@ La raison pour laquelle je commence l' investigation par ces entêtes est simple
 
  *Image 3: Aperçu des entêtes d' authentification*
 
-On observe sur l' image 3, un "*softfail**" du SPF et l' adresses IP de l' envoyeur est 18.208.22.104. On peut ensuite passer au corps du courriel.
+On observe sur l' image 3, un "*softfail**" du SPF et aussi l' état "Fail" du DKIM ce qui signifie que l' expéditeur n' a pas été authentifié. L' adresses IP de l'expéditeur est 18.208.22.104. On peut ensuite passer au corps du courriel.
 
 ### **3- Corps du courriel** ###
 L' image 4 présente ce qui est considéré comme le corps du courriel. Il contient le contenu du courriel.
@@ -107,13 +109,66 @@ Apres quelques recherches notamment **Malpedia**, un **AsyncRat** est un outil d
 
 Selon Bitdefender, **BitRat** est un cheval de Troie d'accès à distance (RAT) notoire, commercialisé sur les marchés et forums clandestins de cybercriminels. Son prix de 20 $ pour un accès à vie le rend irrésistible pour les cybercriminels et favorise la propagation de son code malveillant. De plus, la diversité des modes opératoires des acheteurs rend BitRAT d'autant plus difficile à neutraliser, car il peut être utilisé dans diverses opérations, telles que l'introduction de logiciels trojanisés, le phishing et les attaques par point d'eau. La popularité de BitRAT tient à sa polyvalence. Cet outil malveillant peut effectuer un large éventail d'opérations, notamment l'exfiltration de données, le contournement du contrôle de compte d'utilisateur (UAC), les attaques DDoS, la surveillance du presse-papiers, l'accès non autorisé à la webcam, le vol d'identifiants, l'enregistrement audio, le minage de cryptomonnaie XMRig et l'enregistrement de frappe au clavier.
 
-Enfin **Coinminer**  est un logiciel malveillant indésirable qui utilise la puissance de calcul de la victime (principalement le processeur et la mémoire vive) pour miner des cryptomonnaies (par exemple, Monero ou Zcash). Ce logiciel malveillant assure sa persistance en installant un mineur open source au démarrage, sans l'accord de la victime. Les mineurs de cryptomonnaies les plus sophistiqués utilisent des paramètres de minuterie ou limitent l'utilisation du processeur pour rester discrets.
+Enfin **Coinminer**  est un logiciel malveillant indésirable qui utilise la puissance de calcul de la victime (principalement le processeur et la mémoire vive) pour miner des cryptomonnaies (par exemple, Monero ou Zcash). Ce logiciel malveillant assure sa persistance en installant un mineur open source au démarrage, sans l'accord de la victime. Les mineurs de cryptomonnaies les plus sophistiqués utilisent des paramètres de minuterie ou limitent l'utilisation du processeur pour rester discrets. L' image 7 présente un détail complet du programme malicieux contenu dans le lien url.
 
 
 <img width="2594" height="1625" alt="details du malware" src="https://github.com/user-attachments/assets/24c379a3-9a4e-4e0d-8a21-4b5f4e0c6924" />
 
  *Image 7: Details du malware*
 
+
+
+ 
+### **4- Réponses aux questions** ###
+
+Apres avoir enqueter et compri le risque que comportait le lien dans le corps du courriel, il est temps de commencer à répondre aux questions.
+
+
+**Q1** : Identifier l'adresse IP de l'expéditeur grâce à des valeurs SPF et DKIM spécifiques permet de remonter à la source d'un courriel d'hameçonnage. Quelle est l'adresse IP de l'expéditeur dont la valeur SPF est « softfail » et la valeur DKIM « fail » ?
+
+**Réponse:** l'adresse IP de l'expéditeur  **18.208.22.104**
+
+**Q2** : Comprendre le chemin de retour d'un courriel est essentiel pour en retracer l'origine. Quel est le chemin de retour spécifié dans ce courriel ?
+
+**Réponse:** le chemin de retour spécifié dans ce courriel est  **erikajohana.lopez@uptc.edu.co**
+
+**Q3** : Identifier la source d'un logiciel malveillant est crucial pour une atténuation et une réponse efficaces aux menaces. Quelle est l'adresse IP du serveur hébergeant le fichier malveillant lié à la distribution du logiciel malveillant ?
+
+**Réponse:** l'adresse IP du serveur hébergeant le fichier malveillant est contenu dans le lien http://107.175.247.199/loader/install.exe donc **107.175.247.199**
+
+
+**Q4** : Identifier les logiciels malveillants qui exploitent les ressources système pour le minage de cryptomonnaies est essentiel pour prioriser les efforts d'atténuation des menaces. L'URL malveillante peut diffuser plusieurs types de logiciels malveillants. Quelle famille de logiciels malveillants est responsable du minage de cryptomonnaies ?
+
+**Réponse:** La famille de logiciels malveillants responsable du minage de cryptomonnaies est **Coinminer**
+
+**Q5** : Identifier les URL spécifiques demandées par le logiciel malveillant est essentiel pour perturber ses canaux de communication et réduire son impact. D'après l'analyse précédente de l'échantillon de logiciel malveillant de cryptomonnaie, quelle URL ce logiciel malveillant demande-t-il ?
+
+**Réponse:** HTTP/ripley.studio/loader/uploads/Qanjttrbv.jpeg 
+
+
+**Q6** : Comprendre les entrées de registre ajoutées à la clé d’exécution automatique par un logiciel malveillant est crucial pour identifier ses mécanismes de persistance. D’après l’analyse de l’échantillon de logiciel malveillant BitRAT, quel est le nom de l’exécutable dans la première valeur ajoutée à la clé d’exécution automatique du registre ?
+
+**Réponse:** Jzwvix.exe
+
+**Q7** : Identifier le hachage SHA-256 des fichiers téléchargés depuis une URL malveillante est essentiel pour suivre et analyser l’activité des logiciels malveillants. D’après l’analyse de BitRAT, quel est le hachage SHA-256 du fichier précédemment téléchargé et ajouté aux clés d’exécution automatique ?
+
+**Réponse:** le hachage SHA-256 du fichier précédemment téléchargé et ajouté aux clés d’exécution automatique est **bf7628695c2df7a3020034a065397592a1f8850e59f9a448b555bc1c8c639539**
+
+**Q8** : Analyser les requêtes HTTP effectuées par un logiciel malveillant permet d’identifier ses modes de communication. Quelle est l’URL de la requête HTTP utilisée par le chargeur pour récupérer le logiciel malveillant BitRAT ?
+
+**Réponse:** l’URL de la requête HTTP utilisée par le chargeur pour récupérer le logiciel malveillant BitRAT est **http://107.175.247.199/loader/server.exe**
+
+**Q9** : Introduire un délai dans l’exécution d’un logiciel malveillant peut permettre de contourner les mécanismes de détection. Quel est le délai (en secondes) causé par la commande PowerShell d’après l’analyse de BitRAT ?
+
+**Réponse:** le délai (en secondes) causé par la commande PowerShell d’après l’analyse de BitRAT est **50 sec**
+
+**Q10** : Suivre les domaines de commande et de contrôle (C2) utilisés par les logiciels malveillants est essentiel pour détecter et bloquer les activités malveillantes. Quel est le domaine C2 utilisé par le malware BitRAT ?
+
+**Réponse:** le domaine C2 utilisé par le malware BitRAT est **gh9st.mywire.org**
+
+**Q11** : Comprendre comment les malwares exfiltrent des données est essentiel pour détecter et prévenir les violations de données. D’après l’analyse d’AsyncRAT, quel est l’identifiant du bot Telegram utilisé par ce malware ?
+
+**Réponse:** bot5610920260
 
 
 
