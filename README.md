@@ -257,7 +257,6 @@ Enfin, ce laboratoire m’a permis de mettre en pratique une méthodologie d’i
 
 
 
-### **1- Prise de connaissance du cas** ###
 
 
 
