@@ -11,6 +11,8 @@ L'objectif de ce TP est d'analyser un e-mail suspect à l'aide de plusieurs outi
 ### Outils utilisés
 
 - VirusTotal
+- Malpedia
+- Urlhauss.abuse.ch
 - Notepad++
 - AlienVault
 - DomainTools
@@ -94,11 +96,21 @@ On va a présent verifier dans VirusTotal le lien contenu dans le corps du messa
 
 
 <img width="2906" height="1658" alt="installer" src="https://github.com/user-attachments/assets/f212bc24-ddd4-4054-a6cf-feb3f7c08611" />
- *Image 6: URL *
+
+ *Image 6: URL malveillante*
 
 
 
-On observe que  l' URL est potentiellement dangereuse 12/92 fournisseurs de sécurité ont signalé cette URL comme malveillante.
+On observe que  l' URL est potentiellement dangereuse 12/92 fournisseurs de sécurité ont signalé cette URL comme malveillante. En suivant les avis de la cummunauté et des fournisseurs , on observe que le lien contient un programme malicieux que est classé dans plusieurs catégories: **AsyncRat**, **BitRat** et **Coinminer**. 
+
+Apres quelques recherches notamment **Malpedia**, un **AsyncRat** est un outil d'accès à distance (RAT) conçu pour surveiller et contrôler à distance d'autres ordinateurs via une connexion chiffrée et sécurisée. Bien qu'il s'agisse d'un outil d'administration à distance open source, il peut également être utilisé à des fins malveillantes car il intègre des fonctionnalités telles que l'enregistrement de frappe au clavier, le contrôle de bureau à distance et bien d'autres fonctions susceptibles d'endommager l'ordinateur de la victime. De plus, AsyncRAT peut être diffusé par diverses méthodes, notamment le spear-phishing, la publicité malveillante, les kits d'exploitation et d'autres techniques.
+
+Selon Bitdefender, **BitRat** est un cheval de Troie d'accès à distance (RAT) notoire, commercialisé sur les marchés et forums clandestins de cybercriminels. Son prix de 20 $ pour un accès à vie le rend irrésistible pour les cybercriminels et favorise la propagation de son code malveillant. De plus, la diversité des modes opératoires des acheteurs rend BitRAT d'autant plus difficile à neutraliser, car il peut être utilisé dans diverses opérations, telles que l'introduction de logiciels trojanisés, le phishing et les attaques par point d'eau. La popularité de BitRAT tient à sa polyvalence. Cet outil malveillant peut effectuer un large éventail d'opérations, notamment l'exfiltration de données, le contournement du contrôle de compte d'utilisateur (UAC), les attaques DDoS, la surveillance du presse-papiers, l'accès non autorisé à la webcam, le vol d'identifiants, l'enregistrement audio, le minage de cryptomonnaie XMRig et l'enregistrement de frappe au clavier.
+
+Enfin **Coinminer**  est un logiciel malveillant indésirable qui utilise la puissance de calcul de la victime (principalement le processeur et la mémoire vive) pour miner des cryptomonnaies (par exemple, Monero ou Zcash). Ce logiciel malveillant assure sa persistance en installant un mineur open source au démarrage, sans l'accord de la victime. Les mineurs de cryptomonnaies les plus sophistiqués utilisent des paramètres de minuterie ou limitent l'utilisation du processeur pour rester discrets.
+
+
+
 
 
 
