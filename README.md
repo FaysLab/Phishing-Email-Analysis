@@ -40,19 +40,21 @@ La réalisation de ce TP m’a permis de développer et de mettre en pratique pl
 * Évaluer les risques liés au blocage d’une adresse IP appartenant à un fournisseur de services cloud.
 * Documenter méthodiquement les différentes étapes d’une investigation afin de produire des résultats exploitables par une équipe de sécurité.
 
+* 
+VirusTotal →  ; Malpedia →  ; Joe Sandbox →  ; CyberChef →  ; MalwareBazaar →  ; Email Header Analyzer → .
 
 ### Outils utilisés
 
-- VirusTotal
-- Malpedia
+- VirusTotal : réputation des URL/IP/fichiers
+- Malpedia: renseignements sur les familles de malwares
 - Urlhauss.abuse.ch
 - Notepad++
 - AlienVault
-- JoeSandbox
-- Cyberchef (permet de décrypter)
+- JoeSandbox: analyse comportementale
+- Cyberchef :décodage/transformation de données
 - DomainTools
-- MalwareBazaar
-- Email Header Analyzer
+- MalwareBazaar: recherche d’échantillons et de hash
+- Email Header Analyzer: analyse des en-têtes
 
 ## Étapes du TP
 ### **1- Prise de connaissance du cas** ###
