@@ -53,7 +53,7 @@ Q11 : Comprendre comment les malwares exfiltrent des données est essentiel pour
 
 ### **2- Mise en place de Notepad++** ###
 
-Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration précise. Il s' agit de sélectionner le langage **YAML** sous la section language. Ce paramètres permet de distinguer facilement les différentes parties dont entêtes du courriel.
+Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration précise. Il s' agit de sélectionner le langage **YAML** sous la section language. Ce paramètres permet de distinguer facilement les différentes parties du courriel dont les entêtes.
 
 <img width="3072" height="1753" alt="notepad++" src="https://github.com/user-attachments/assets/14863a90-a12e-406e-82c2-4bc6f15c6f57" />
 
@@ -61,10 +61,17 @@ Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration
 
 Je commence l' investigation par les entêtes **To** et **Subject** qui permettent d' avoir des informations respectivement sur le destinataire du courriel et l' objet du courriel. Ces deux entêtes se situent légèrement au dessus de l entête **FROM** qui nous informe sur l' origine du courriel. Dans ce cas il s' agit de **ERIKA JOHANA LOPEZ VALIENTE < erikajohana.lopez@uptc.edu.co >** . L'entête To affiche **undisclosed-recipients:;** donc ne nous donne pas réellement une information claire sur le destinataire du courriel. L' entête **Message-ID: < CABWu4iua5_uex6=G8pi_OJz1tBLJiNakMK-1=7128orpzxbKxw@mail.gmail.com >** est un identificateur unique. On peut lire gmail.com à la fin, ce qui veut dire que gmail a été utilisé dans le processus de livraison de ce courriel. On observe egalement l' entête **Received: by mail-wr1-f65.google.com with SMTP id ffacd0b85a97d-332e7630a9dso2382526f8f.1  for < servicios.informaticos@fsfb.org.co>;Thu, 9 Dec 2022 06:58:39 -0800 (PST)** qui correspond  au premier serveur mail qui a recu le courriel
 
-La raison pour laquelle je commence l' investigation par ces entêtes est simplement parce qu' on peut généralement obtenir des informations supplémentaires sur l' origine de l' attaqueur. Par exemple on peut voir le domaine fsfb.org.co qui semble suspicieux. On va utiliser des outils OSINT comme VirusTotal, DomainTools pour creuser en profondeur et vérifier la légitimité de informations.
+La raison pour laquelle je commence l' investigation par ces entêtes est simplement parce qu' on peut généralement obtenir des informations supplémentaires sur l' origine de l' attaqueur. Par exemple on peut voir le domaine fsfb.org.co qui semble suspicieux. On va utiliser des outils OSINT comme VirusTotal, DomainTools pour creuser en profondeur, obtenir plus de contexte et vérifier la légitimité de informations.
 
 ### **3- Entêtes d' authentification** ###
+
+ La prochaine étape dans l' investigation est la vérification des résultats d' authentification ou entêtes d' authentification. Cette obeservation nous permettra de donner des informations sur **SPF, DKIM et DMARC**. SPF  **DKIM DomainKeys Identified Mail** permet d' authentifier l’expéditeur d’un email et **DMARC — Domain-based Message Authentication Reporting and Conformance** protège contre le spoofing email. Ces trois paramètres représentent en quelque soit la sécurité du courriel.
  
+ <img width="1509" height="434" alt="authentification results" src="https://github.com/user-attachments/assets/d7006ed6-f456-4ce2-a736-404c19946779" />
+
+ *Image 3: Aperçu des entêtes d' authentification*
+
+
 
 
 
