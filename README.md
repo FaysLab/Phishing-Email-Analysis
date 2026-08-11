@@ -2,32 +2,30 @@
 
 ## Objectif
 
-## Objectif
-
 L’objectif de ce TP est de mener une investigation complète sur un courriel suspect afin de déterminer s’il s’agit d’une tentative d’hameçonnage et d’identifier les menaces qui lui sont associées.
 L’analyse est réalisée à partir du laboratoire PhishStrike de la plateforme BlueDefenders. Elle consiste notamment à examiner les en-têtes et les mécanismes d’authentification du courriel (SPF, DKIM et DMARC), à analyser les URL et fichiers suspects, puis à utiliser différentes sources de renseignement sur les menaces et des outils d’analyse de logiciels malveillants.
 L’investigation vise également à identifier les familles de malwares impliquées, leurs mécanismes de persistance et leurs communications de commande et de contrôle (C2), ainsi qu’à extraire les principaux indicateurs de compromission (IOC) pouvant être utilisés dans le cadre d’une investigation ou d’une réponse à incident.
 
 
-### Compétences acquises
+## Compétences acquises
 
 La réalisation de ce TP m’a permis de développer et de mettre en pratique plusieurs compétences liées à l’analyse des courriels d’hameçonnage, au renseignement sur les menaces et à l’investigation de logiciels malveillants.
 
-## Analyse des courriels suspects
+### Analyse des courriels suspects
 
 * Examiner la structure et les en-têtes techniques d’un courriel.
 * Identifier l’expéditeur, le destinataire, le chemin de retour et les serveurs ayant participé à l’acheminement du message.
 * Interpréter les mécanismes d’authentification SPF, DKIM et DMARC.
 * Repérer des anomalies pouvant indiquer une usurpation d’identité ou une tentative d’hameçonnage.
 
-## Investigation OSINT et Threat Intelligence
+### Investigation OSINT et Threat Intelligence
 
 * Enrichir des indicateurs suspects à l’aide de plusieurs sources de renseignement sur les menaces.
 * Analyser la réputation d’adresses IP, de domaines, d’URL et de fichiers.
 * Recouper les résultats provenant de plusieurs sources avant de tirer une conclusion.
 * Identifier et documenter des indicateurs de compromission (IOC).
 
-## Analyse de logiciels malveillants
+### Analyse de logiciels malveillants
 
 * Identifier différentes familles de malwares associées à une même chaîne d’infection, notamment Coinminer, BitRAT et AsyncRAT.
 * Analyser les comportements observés lors de l’exécution d’un malware.
@@ -35,7 +33,7 @@ La réalisation de ce TP m’a permis de développer et de mettre en pratique pl
 * Examiner les communications HTTP utilisées pour télécharger des charges malveillantes.
 * Identifier des infrastructures de commande et de contrôle (C2).
 
-## Investigation et réponse à incident
+### Investigation et réponse à incident
 
 * Extraire des IOC tels que des adresses IP, URL, domaines, noms de fichiers et hachages SHA-256.
 * Distinguer un indicateur réellement malveillant d’une infrastructure légitime potentiellement utilisée abusivement.
