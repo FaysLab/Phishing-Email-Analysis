@@ -12,6 +12,8 @@ L'objectif de ce TP est d'analyser un e-mail suspect à l'aide de plusieurs outi
 
 - VirusTotal
 - Notepad++
+- AlienVault
+- DomainTools
 - MalwareBazaar
 - Email Header Analyzer
 
@@ -49,13 +51,15 @@ Q10 : Suivre les domaines de commande et de contrôle (C2) utilisés par les log
 Q11 : Comprendre comment les malwares exfiltrent des données est essentiel pour détecter et prévenir les violations de données. D’après l’analyse d’AsyncRAT, quel est l’identifiant du bot Telegram utilisé par ce malware ?
 
 
-### **2- Prise de connaissance du cas** ###
+### **2- Mise en place de Notepad++** ###
 
 Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration précise. Il s' agit de sélectionner le langage **YAML** sous la section language. Ce paramètres permet de distinguer facilement les différentes parties dont entêtes du courriel.
 
 <img width="3072" height="1753" alt="notepad++" src="https://github.com/user-attachments/assets/14863a90-a12e-406e-82c2-4bc6f15c6f57" />
 
 *Image 2: Aperçu de la configuration Notepad++*
+
+Je commence l' investigation par les entêtes **To** et **Subject** qui permet d' avoir des informations respectivement sur le destinataire du courriel et l' objet du courriel. Ces deux entêtes se situent légèrement au dessus de l entête **FROM** qui nous informe sur l' origine du courriel. Dnas ce cas il s' agit de **ERIKA JOHANA LOPEZ VALIENTE <erikajohana.lopez@uptc.edu.co>** . L entete To affiche **undisclosed-recipients:;** donc ne nous donne pas reellement une information claire sur le destinataire du courriel
 
 
 
