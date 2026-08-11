@@ -209,6 +209,13 @@ Apres avoir enqueter et compri le risque que comportait le lien dans le corps du
 
 
 
+## Conclusion
+
+Cette investigation a permis d’analyser les différentes étapes d’une attaque d’hameçonnage, depuis l’examen initial du courriel jusqu’à l’identification des logiciels malveillants et de leur infrastructure de communication.
+L’analyse des en-têtes du message a notamment mis en évidence des anomalies au niveau des mécanismes d’authentification, avec un résultat SPF « softfail » et un échec de la vérification DKIM. L’examen du corps du courriel a ensuite permis d’identifier une URL suspecte pointant vers un fichier exécutable. L’enrichissement de cet indicateur à l’aide de différentes sources de renseignement sur les menaces a permis de poursuivre l’investigation et d’identifier plusieurs familles de logiciels malveillants associées à la chaîne d’infection, notamment Coinminer, BitRAT et AsyncRAT.
+L’analyse a également permis d’identifier plusieurs éléments caractéristiques d’une compromission, notamment des URL de téléchargement, un fichier exécutable utilisé pour la persistance, un hachage SHA-256, un domaine de commande et de contrôle (C2) ainsi qu’un identifiant de bot Telegram. Ces informations constituent des indicateurs de compromission pouvant être utilisés pour approfondir une investigation et contribuer à la détection ou à la réponse à incident.
+Ce TP montre également l’importance de ne pas tirer de conclusion à partir d’un seul indicateur. L’utilisation d’une infrastructure appartenant à un fournisseur cloud légitime, par exemple, ne garantit pas que l’activité observée soit légitime et ne justifie pas non plus le blocage systématique de l’ensemble de cette infrastructure. L’investigation doit reposer sur la corrélation de plusieurs éléments techniques et contextuels.
+Enfin, ce laboratoire m’a permis de mettre en pratique une méthodologie d’investigation proche de celle utilisée dans un environnement SOC : collecte d’informations, analyse des en-têtes, extraction et enrichissement des IOC, analyse du comportement des malwares, identification des mécanismes de persistance et des communications C2, puis documentation des résultats. Cette approche permet de passer d’un simple courriel suspect à une compréhension plus complète de la chaîne d’attaque et des mesures de détection et de réponse pouvant être mises en œuvre.
 
 
 
@@ -218,7 +225,7 @@ Apres avoir enqueter et compri le risque que comportait le lien dans le corps du
 
 
 
-### **1- Prise de connaissance du cas** ###
+
 
 
 
