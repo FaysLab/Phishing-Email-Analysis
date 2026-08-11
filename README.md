@@ -59,9 +59,12 @@ Pour analyser le courriel suspicieux, j'utilise Notepad++ avec une configuration
 
 *Image 2: Aperçu de la configuration Notepad++*
 
-Je commence l' investigation par les entêtes **To** et **Subject** qui permet d' avoir des informations respectivement sur le destinataire du courriel et l' objet du courriel. Ces deux entêtes se situent légèrement au dessus de l entête **FROM** qui nous informe sur l' origine du courriel. Dnas ce cas il s' agit de **ERIKA JOHANA LOPEZ VALIENTE <erikajohana.lopez@uptc.edu.co>** . L entete To affiche **undisclosed-recipients:;** donc ne nous donne pas reellement une information claire sur le destinataire du courriel
+Je commence l' investigation par les entêtes **To** et **Subject** qui permettent d' avoir des informations respectivement sur le destinataire du courriel et l' objet du courriel. Ces deux entêtes se situent légèrement au dessus de l entête **FROM** qui nous informe sur l' origine du courriel. Dans ce cas il s' agit de **ERIKA JOHANA LOPEZ VALIENTE < erikajohana.lopez@uptc.edu.co >** . L'entête To affiche **undisclosed-recipients:;** donc ne nous donne pas réellement une information claire sur le destinataire du courriel. L' entête **Message-ID: < CABWu4iua5_uex6=G8pi_OJz1tBLJiNakMK-1=7128orpzxbKxw@mail.gmail.com >** est un identificateur unique. On peut lire gmail.com à la fin, ce qui veut dire que gmail a été utilisé dans le processus de livraison de ce courriel. On observe egalement l' entête **Received: by mail-wr1-f65.google.com with SMTP id ffacd0b85a97d-332e7630a9dso2382526f8f.1  for < servicios.informaticos@fsfb.org.co>;Thu, 9 Dec 2022 06:58:39 -0800 (PST)** qui correspond  au premier serveur mail qui a recu le courriel
 
+La raison pour laquelle je commence l' investigation par ces entêtes est simplement parce qu' on peut généralement obtenir des informations supplémentaires sur l' origine de l' attaqueur. Par exemple on peut voir le domaine fsfb.org.co qui semble suspicieux. On va utiliser des outils OSINT comme VirusTotal, DomainTools pour creuser en profondeur et vérifier la légitimité de informations.
 
+### **3- Entêtes d' authentification** ###
+ 
 
 
 
