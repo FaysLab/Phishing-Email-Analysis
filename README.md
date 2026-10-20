@@ -40,8 +40,6 @@ La réalisation de ce TP m’a permis de développer et de mettre en pratique pl
 * Évaluer les risques liés au blocage d’une adresse IP appartenant à un fournisseur de services cloud.
 * Documenter méthodiquement les différentes étapes d’une investigation afin de produire des résultats exploitables par une équipe de sécurité.
 
-* 
-VirusTotal →  ; Malpedia →  ; Joe Sandbox →  ; CyberChef →  ; MalwareBazaar →  ; Email Header Analyzer → .
 
 ### Outils utilisés
 
